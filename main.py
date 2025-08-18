@@ -15,7 +15,7 @@ def main():
     dt = 0
 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    pygame.display.set_caption("Asteroids 0.1.1")
+    pygame.display.set_caption("Asteroids 0.1.2")
 
     #Creating Sprite groups
     updatable = pygame.sprite.Group()
@@ -49,7 +49,13 @@ def main():
             if item.collision(player) == True:
                 print("Game Over!")
                 sys.exit()
-        
+
+        for asteroid in asteroids:
+            for shot in shots:
+                if asteroid.collision(shot) == True:
+                    asteroid.kill()
+                    shot.kill()
+                
         #Drawing items in Drawables container
         for item in drawable:
             item.draw(screen)
