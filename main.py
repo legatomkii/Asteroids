@@ -6,7 +6,6 @@ from asteroid import Asteroid
 from asteroidfield import AsteroidField
 from shot import Shot
 
-
 def main():
     pygame.init()
     print(f"Starting Asteroids!")
@@ -16,7 +15,7 @@ def main():
     dt = 0
 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    pygame.display.set_caption("Asteroids 0.1.0")
+    pygame.display.set_caption("Asteroids 0.1.1")
 
     #Creating Sprite groups
     updatable = pygame.sprite.Group()
