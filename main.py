@@ -15,7 +15,7 @@ def main():
     dt = 0
 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    pygame.display.set_caption("Asteroids 0.1.2")
+    pygame.display.set_caption("Asteroids 0.1.3")
 
     #Creating Sprite groups
     updatable = pygame.sprite.Group()
@@ -32,7 +32,6 @@ def main():
     #Creating player start position and containers
     Player.containers = (updatable, drawable)
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
-    
     
     #Infinite "While" loop for gameplay
     while True:
@@ -53,7 +52,7 @@ def main():
         for asteroid in asteroids:
             for shot in shots:
                 if asteroid.collision(shot) == True:
-                    asteroid.kill()
+                    asteroid.split()
                     shot.kill()
                 
         #Drawing items in Drawables container
