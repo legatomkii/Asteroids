@@ -17,7 +17,7 @@ def main():
     font = pygame.font.SysFont(None, 40)
 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    pygame.display.set_caption("Asteroids 0.1.3")
+    pygame.display.set_caption("Asteroids 0.1.4")
 
     #Creating Sprite groups
     updatable = pygame.sprite.Group()
